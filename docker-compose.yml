@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  mindlens:
+    build: .
+    container_name: mindlens
+    ports:
+      - "8501:8501"
+    environment:
+      # You can override any of these if needed
+      GOEMOTIONS_MODEL_DIR: /app/BERT_FINE_TURNED_EMOTION_DECTION_USING_TEXT
+      SPACY_MODEL_DIR: /app/spacy_model_context
+      SBERT_MODEL_DIR: /app/bert_model_offilne
+      WHISPER_MODEL_DIR: /app/models/small
+      SUICIDE_MODEL_PATH: /app/sucide_detection/suicide_detection_model.h5
+      SUICIDE_TOKENIZER_PATH: /app/sucide_detection/tokenizer.pickle
+      VECTOR_STORE: faiss
+      LLM_BACKEND: "none"
+      AUTO_ALERT_ENABLED: "false"
+      # To enable Hugging Face LLM summaries, set:
+      # LLM_BACKEND: "huggingface"
+      # HF_API_TOKEN: "<your_hf_token>"
+      # HF_MODEL: "meta-llama/Llama-3.1-8B-Instruct"
+    volumes:
+      # Persist user data & vector DB across container restarts
+      - mindlens_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  mindlens_data:

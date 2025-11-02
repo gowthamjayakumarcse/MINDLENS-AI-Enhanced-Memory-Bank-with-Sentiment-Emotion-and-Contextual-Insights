@@ -1,0 +1,30 @@
+# Keep the image lean
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.cache
+*.mp4
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.tar
+
+# Don't bake local DB/history into the image; it will live in /app/data as a volume
+data/
+
+# Node / misc
+node_modules/
+dist/
+build/
+
+# Virtualenvs
+.venv/
+venv/
+
+# Git
+.git/
+.gitignore
