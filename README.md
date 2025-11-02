@@ -1,4 +1,5 @@
-# MindLens - AI-Powered Digital Diary 🧠✨
+# MINDLENS-AI-Enhanced-Memory-Bank-with-Sentiment-Emotion-and-Contextual-Insights
+ 🧠✨
 
 **MindLens** is your private, intelligent digital diary that understands your emotions, thoughts, and mental well-being. Using advanced AI models running **100% locally on your device**, MindLens provides deep insights into your emotional journey while keeping your privacy intact.
 
@@ -722,3 +723,4 @@ For technical issues:
 **Made with ❤️ for mental health awareness and personal growth**
 
 *Remember: Your mental health matters. You are not alone.*
+
